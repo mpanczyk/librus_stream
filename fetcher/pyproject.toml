@@ -2,6 +2,7 @@
 name = "librus-fetcher"
 version = "0.1.0"
 description = "Pobieranie i cache'owanie wpisów z dziennika Librus Synergia"
+license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
     # wersja musi odpowiadać obrazowi mcr.microsoft.com/playwright/python w Dockerfile

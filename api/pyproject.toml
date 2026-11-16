@@ -2,6 +2,7 @@
 name = "librus-api"
 version = "0.1.0"
 description = "API (FastAPI) udostępniające wpisy zapisane przez librus-fetcher"
+license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi==0.163.1",

@@ -183,3 +183,7 @@ osoba z dostępem do dziennika szkoły mogłaby na ich podstawie rozpoznać szko
   w ocenach jest pomijany.
 - Struktura stron Librusa może się zmienić — wtedy błąd sekcji trafia do logów, a pozostałe
   sekcje są zapisywane normalnie.
+
+## Licencja
+
+[MIT](LICENSE).
