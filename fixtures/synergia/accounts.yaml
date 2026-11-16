@@ -1,0 +1,12 @@
+# Konta mock serwisu (zmyślone). Trzy loginy wskazują na ten sam zestaw stron,
+# żeby testować jeden cykl dla trojga dzieci i deduplikację wpisów wspólnych (ogłoszeń).
+accounts:
+  - login: "mock_alfa"
+    password: "mock-pass-1"
+    fixture: account0
+  - login: "mock_beta"
+    password: "mock-pass-2"
+    fixture: account0
+  - login: "mock_gamma"
+    password: "mock-pass-3"
+    fixture: account0

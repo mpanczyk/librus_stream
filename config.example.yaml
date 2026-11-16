@@ -1,0 +1,29 @@
+# Przykładowa konfiguracja. Skopiuj do config.yaml (ignorowany przez git) i uzupełnij.
+#
+# Każde konto = jedno dziecko z własnym loginem do Librus Synergia.
+# W jednym cyklu sprawdzania fetcher loguje się kolejno na każde konto
+# i zapisuje wpisy z przypisaniem do pola `name` (kolumna `student`).
+# Wpisy wspólne (np. ogłoszenia) są zapisywane raz, z student = NULL.
+
+accounts:
+  - name: "Alfa"            # unikalna etykieta dziecka, trafia do kolumny `student`
+    login: "1234567"        # login do Librus Synergia
+    password: "CHANGE_ME"
+  - name: "Beta"
+    login: "2345678"
+    password: "CHANGE_ME"
+  - name: "Gamma"
+    login: "3456789"
+    password: "CHANGE_ME"
+
+# Opcjonalne - wartości domyślne w komentarzach.
+fetcher:
+  # base_url: "https://synergia.librus.pl"   # w testach: adres mock serwisu
+  # interval_minutes: 60                     # odstęp między cyklami sprawdzania
+  # headless: true
+  # request_delay_seconds: 2                 # pauza między stronami (oszczędzamy infrastrukturę)
+  # calendar_months_ahead: 1                 # ile kolejnych miesięcy terminarza sprawdzać
+  # portal_url: "https://portal.librus.pl/rodzina"   # start logowania
+
+database:
+  # path: "/data/librus.sqlite"              # ścieżka wewnątrz kontenera (volumen z hosta)

@@ -1,0 +1,14 @@
+# Kontekst budowania to korzeń repo - nie wysyłamy sekretów, danych ani środowisk.
+config.yaml
+.env
+data/
+data-mock/
+raw/
+fixtures/
+tests/
+tools/
+.venv/
+.git/
+**/__pycache__/
+**/*.pyc
+*.swp

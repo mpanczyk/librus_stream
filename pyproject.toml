@@ -1,0 +1,24 @@
+# Wirtualny korzeń workspace'u uv: zależności każdego serwisu są w jego pyproject.toml,
+# wspólny lockfile to uv.lock. Środowisko deweloperskie (testy, narzędzia z tools/):
+#   uv sync && uv run pytest
+[tool.uv.workspace]
+members = ["fetcher", "api", "mock_librus"]
+
+[tool.uv]
+required-version = ">=0.9.5"
+
+[tool.uv.sources]
+librus-fetcher = { workspace = true }
+librus-api = { workspace = true }
+librus-mock = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "librus-fetcher",
+    "librus-api",
+    "librus-mock",
+    "pytest==9.2.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

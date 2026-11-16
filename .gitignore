@@ -1,0 +1,9 @@
+config.yaml
+data/
+.env
+__pycache__/
+*.pyc
+.venv/
+raw/
+data-mock/
+*.swp

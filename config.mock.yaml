@@ -1,0 +1,21 @@
+# Konfiguracja dla mock serwisu (docker-compose.mock.yml). Dane logowania są zmyślone
+# i odpowiadają fixtures/synergia/accounts.yaml.
+accounts:
+  - name: "Alfa"
+    login: "mock_alfa"
+    password: "mock-pass-1"
+  - name: "Beta"
+    login: "mock_beta"
+    password: "mock-pass-2"
+  - name: "Gamma"
+    login: "mock_gamma"
+    password: "mock-pass-3"
+
+fetcher:
+  portal_url: "http://mock-librus:8000/rodzina"
+  base_url: "http://mock-librus:8000"
+  request_delay_seconds: 0
+  interval_minutes: 5
+
+database:
+  path: "/data/librus.sqlite"

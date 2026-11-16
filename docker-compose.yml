@@ -1,0 +1,26 @@
+services:
+  fetcher:
+    build:
+      context: .
+      dockerfile: fetcher/Dockerfile
+    restart: unless-stopped
+    # Pliki bazy w ./data mają należeć do użytkownika hosta, nie do roota.
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      CONFIG_PATH: /config/config.yaml
+    volumes:
+      - ./config.yaml:/config/config.yaml:ro
+      - ./data:/data
+
+  api:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    restart: unless-stopped
+    user: "${UID:-1000}:${GID:-1000}"
+    environment:
+      DATABASE_PATH: /data/librus.sqlite
+    volumes:
+      - ./data:/data
+    ports:
+      - "127.0.0.1:${API_PORT:-8001}:8000"

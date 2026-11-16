@@ -1,0 +1,22 @@
+# Uruchomienie z mock serwisem zamiast prawdziwego Librusa:
+#   docker compose -f docker-compose.yml -f docker-compose.mock.yml up --build
+services:
+  mock-librus:
+    build:
+      context: .
+      dockerfile: mock_librus/Dockerfile
+    volumes:
+      - ./fixtures/synergia:/fixtures:ro
+    ports:
+      - "127.0.0.1:8081:8000"
+
+  fetcher:
+    depends_on:
+      - mock-librus
+    volumes:
+      - ./config.mock.yaml:/config/config.yaml:ro
+      - ./data-mock:/data
+
+  api:
+    volumes:
+      - ./data-mock:/data

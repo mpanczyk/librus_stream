@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pl-PL"><head><title>LIBRUS Synergia</title>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+   
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+     
+
+
+
+
+
+
+
+
+</head>
+<body onload="ImageSwaper.GetInstance().Load(); ">
+<div id="preloader-box" style="display: none;">
+<div id="preloader-curtain"></div>
+<div id="preloader" style="left: 640px; top: 360px;">
+<span id="preloader-logo"></span>
+<span id="preloader-loader"></span>
+</div>
+</div> <div class="yellowCard maximalize" id="yellowCard_1" style="left: 490px; top: 210px; display: none;">
+<div class="titleYellowCard maximalize" id="yellowCard_1_DraggHandle" onmouseup="interface_object_save_position('yellowCard_1', $(this.parentNode).offset().left, $(this.parentNode).offset().top, interfejs_fold_object());">
+<div class="content"></div>
+</div>
+<div class="yellowCardClose" onclick='yellowCardAction("close", "yellowCard_1");' onmouseup="return false;">
+<a href="javascript:void(0);"></a>
+</div>
+<div class="yellowCardMinimalize" onclick='yellowCardAction("minimalize", "yellowCard_1");'></div>
+<div class="yellowCardMaximalize" onclick='yellowCardAction("maximalize", "yellowCard_1");' style="display:none;"></div>
+<div class="cardBody">
+<div class="content"></div>
+</div>
+</div>
+
+
+
+<div class="altum" id="page">
+<div id="header"> <div id="main-navigation-container">
+<div id="main-navigation"> <div id="main-menu">
+<ul class="main-menu-list">
+<li><a href="/wyloguj">Wyloguj</a></li> <li><a href="/help/D13" target="_blank">Pomoc</a></li> <li><a href="/ustawienia">Ustawienia</a></li> <li><a href="/ankiety_admin_ankiety">Ankiety</a></li>
+<li>
+<a href="javascript: void(null);">Uczeń</a>
+<ul> <li><a href="/uwagi">Uwagi</a></li> <li><a href="/uczen_wyniki_egzaminow">Wyniki egzaminów</a></li> <li><a href="/szczegolne_osiagniecia_ucznia">Szczególne osiągnięcia</a></li> <li><a href="/informacja">Informacje</a></li> </ul>
+</li> <li>
+<a href="javascript: void(null);">Organizacja</a>
+<ul>
+<li><a href="javascript:otworz_w_nowym_oknie('/przegladaj_plan_lekcji','plan_u',0,0)">Plan lekcji</a></li>
+<li><a href="/dyzury">Dyżury</a></li> <li><a href="/zaplanowane_lekcje">Lekcje</a></li> <li><a href="/pliki_szkoly">Pliki szkoły</a></li> </ul>
+</li> <li><a href="/eusprawiedliwienia">e-Usprawiedliwienia</a></li> <li>
+<a href="javascript: void(null);">Świetlica</a>
+<ul>
+<li><a href="/panel_rodzica/swietlica/wygenerowane_kody">Kody PIN</a></li>
+<li><a href="/panel_rodzica/swietlica/osoby_uprawnione">Osoby uprawnione</a></li>
+</ul>
+</li> <li>
+<a href="https://eduranga.pl/librus" target="_blank">EDURANGA</a>
+</li> </ul>
+</div>
+</div>
+</div> <div id="top-banner-container">
+<a href="/rodzic/index             ">
+<img id="top-banner" src="/assets/img/synergia/header/benners/default.png         "/>
+</a> <div id="graphic-menu">
+<ul> <li>
+<a href="/gateway/ms/studentdatapanel/ui/" id="icon-wcag" title="Widok alternatywny">
+<span class="circle"></span> Widok alternatywny
+            </a>
+</li> <li><a href="/przegladaj_oceny/uczen" id="icon-oceny"><span class="circle"></span>Oceny</a>
+</li>
+<li>
+<a href="/przegladaj_nb/uczen" id="icon-nb">
+<span class="circle"></span>Frekwencja
+                        </a>
+</li>
+<li><a href="/wiadomosci" id="icon-wiadomosci" title="Liczba nieprzeczytanych wiadomości: 33"><span class="circle"></span>Wiadomości</a> 
+</li><li><a href="/ogloszenia" id="icon-ogloszenia"><span class="circle"></span>Ogłoszenia</a> </li>
+<li><a href="/terminarz" id="icon-terminarz"><span class="circle"></span>Terminarz</a> </li>
+<li><a href="/moje_zadania" id="icon-zadania"><span class="circle"></span>Zadania domowe</a> </li>
+</ul>
+</div> </div>
+<div id="user-section">
+szczęśliwy numerek: <span class="luckyNumber"> <b>1</b> </span>    <span class="tooltip" title="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)">historia logowań </span> <img alt="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)" class="tooltip helper-icon" src="/images/pomoc_ciemna.png" title="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)"/>  | jesteś zalogowany jako: <b>Rodzic Testowy</b>
+<select id="language" name="Język" onchange="window.location.href=this.value;" style="width: 80px; height: 20px;">
+<option value="/gateway/ms/studentdatapanel/ui/">polski</option>
+<option value="/gateway/ms/studentdatapanel/ui/angielska-instrukcja">english</option>
+<option value="/gateway/ms/studentdatapanel/ui/rosyjska-instrukcja">русский</option>
+<option value="/gateway/ms/studentdatapanel/ui/ukrainska-instrukcja">український</option>
+</select>
+</div>
+</div>
+
+<div id="left-widgets-container" style="height: 0px; position: fixed; top: 152px;">
+</div>
+<div id="body">
+<div id="missing-2fa-warning"></div>
+<form action="/wiadomosci" enctype="multipart/form-data" id="formWiadomosci" method="POST" name="formWiadomosci">
+<input name="requestkey" type="hidden" value="FAKE_REQUEST_KEY"/>
+<input id="filtrUzytkownikow" name="filtrUzytkownikow" type="hidden" value="0"/>
+<input name="idPojemnika" type="hidden" value="105"/>
+<div class="container">
+<h2 class="inside"> Wiadomości </h2><div class="container-background">
+<div class="warning-box information medium">
+<div class="warning-head">
+<span class="warning-title">Informacja</span>
+<span class="warning-close"> </span>
+</div>
+<div class="warning-content">
+<p>Korzystasz ze starej wersji modułu Wiadomości, która nie jest już rozwijana i nie zawiera wszystkich dostępnych funkcji.</p>
+<p><b>Przejdź do ustawień i włącz opcję: Używaj nowego systemu wiadomości.</b></p>
+</div>
+<div class="center">
+<input aria-disabled="false" class="ui-button ui-widget ui-state-default ui-corner-all" onclick="location.href='/ustawienia';" role="button" style="z-index: 0;" type="button" value="Przejdź do ustawień"/>
+</div>
+<br/>
+</div>
+<table class="stretch container-message">
+<tbody><tr>
+<td class="message-folders">
+<table class="message-folders-options">
+<tbody><tr>
+<td><a class="button left blue" href="/wiadomosci/2/5" id="wiadomosci-napisz" style="width: 100px;">
+<span class="button-start">Napisz</span><span class="button-end"></span>
+</a> </td>
+</tr>
+</tbody></table> <table class="message-folders">
+<tbody><tr>
+<td class="tree-first-branch"> </td>
+<td>
+<a class="" href="/wiadomosci/10">uwagi</a>
+</td>
+</tr>
+<tr>
+<td class="tree-next-branch"> </td>
+<td style="font-weight: bold">
+<a class="selected" href="/wiadomosci/5">odebrane</a>
+</td>
+</tr>
+<tr>
+<td class="tree-next-branch"> </td>
+<td>
+<a class="" href="/wiadomosci/6">wysłane</a>
+</td>
+</tr>
+<tr>
+<td class="tree-next-branch"> </td>
+<td>
+<a class="" href="/wiadomosci/7">kosz</a>
+</td>
+</tr>
+<tr>
+<td class="tree-last-branch"> </td>
+<td>
+<a href="/wiadomosci_archiwum">Archiwum</a>
+</td>
+</tr></tbody></table><hr class="message-block-separator"/>
+<table class="stretch message-folders-options"><tbody><tr><td><input aria-disabled="false" class="small ui-button ui-widget ui-state-default ui-corner-all" onclick="otworz_w_nowym_oknie('/wiadomosci/etykiety','o1',700,400)" role="button" style="z-index: 0;" type="BUTTON" value="Dodaj"/></td></tr></tbody></table>
+<table class="message-labels">
+<tbody><tr>
+<td class="space-holder"> </td>
+<td colspan="3"><b>Etykiety</b></td>
+</tr>
+</tbody></table></td><td><table class="stretch message-button-panel"><tbody><tr><td style="vertical-align: middle; text-align: left;   white-space: nowrap;  ">
+<input aria-disabled="false" class="medium left ui-button ui-widget ui-state-default ui-corner-all" name="usun_zaznaczone" onclick="usunListeWiadomosci(5, 0, 0)" role="button" style="z-index: 0;" tabindex="3" type="button" value="Usuń zaznaczone"/><select class="big left" name="opcja_zaznaczone_g" onchange='if(this.value=="drukujWiadomosci") {document.forms[0].action="/wiadomosci/wydruk_wiadomosci.pdf"; document.forms[0].target="_blank"; document.forms[0].submit(); document.forms[0].target="_self"; document.forms[0].action="\/wiadomosci"; this.selectedIndex=0; document.querySelectorAll("input.wiadomoscLista:checked").forEach(input =&gt; input.closest("tr").querySelectorAll("td").forEach(td =&gt; td.style = ""));} else {this.form.submit();}'><option value="0">Więcej poleceń...</option><optgroup label="Inne:"><option value="drukujWiadomosci">Drukuj</option></optgroup></select>
+</td><td style="vertical-align: middle; text-align: right;   ">
+	Pokaż tylko wiadomości otrzymane od nadawcy
+	</td><td class="big" style="vertical-align: middle; text-align: left;   ">
+<select class="big left" name="filtr_uzytkownikow" onchange="this.form.action='/wiadomosci/5'; this.form.submit()"><option value="-">Wszyscy użytkownicy</option><option value="100001">Beta Gamma [Nauczyciel]  </option><option value="100002">Kappa dop Doświadczalna [Nauczyciel]  </option><option value="100003">Roboczy Umowny [Nauczyciel]  </option><option value="100004">Atrapa Próbny [Nauczyciel]  </option><option value="100005">Ilustracyjny Demonstracyjna [Nauczyciel]  </option><option value="100006">Zeta Eta [Rodzic] 7a SP1</option><option value="100007">Delta Epsilon [Nauczyciel]  </option><option value="100008">Theta Jota [Nauczyciel]  </option><option value="100009">Pozorna Modelowy [Nauczyciel]  </option><option value="100010">Pokazowy Alfa [Nauczyciel]  </option><option value="100011">Przykładowy Testowa [Dyrektor Szkoły]  </option></select>
+</td></tr></tbody></table><table class="decorated stretch" style="margin: 5px 0px;">
+<thead><tr><td class="micro">
+<input id="wiadomosciListaWszystkie" name="zaznacz_wszystkie" onclick="zaznaczWszystkieWiadomosci()" type="checkbox"/>
+</td>
+<td class="micro"> </td>
+<input id="sortujTabeleKolumna" name="sortujTabele[tabeleKolumna]" type="hidden" value="3"/>
+<input id="sortujTabeleKierunek" name="sortujTabele[tabeleKierunek]" type="hidden" value="1"/>
+<input id="sortujTabelePojemnik" name="sortujTabele[tabelePojemnik]" type="hidden" value="105"/>
+<td>
+<a href="javascript:void(0);" onclick="sendSortTable(1, 0)">Nadawca</a>
+                 <input name="sortowanie[105][0]" type="hidden"/></td><td>
+<a href="javascript:void(0);" onclick="sendSortTable(2, 0)">Temat</a>
+                 <input name="sortowanie[105][1]" type="hidden"/></td><td>
+<a href="javascript:void(0);" onclick="sendSortTable(3, 0)">Wysłano</a>
+                 [↑]<input name="sortowanie[105][2]" type="hidden"/></td><td class="micro"> </td>
+</tr></thead>
+<tbody>
+<tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100012"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100012/f0">Atrapa Próbny (Atrapa Próbny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100012/f0">Wiadomość testowa 048</a></td> <td class="medium center">2026-11-12 18:05:55</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100012, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100013"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100013" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100013/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100013/f0">Wiadomość testowa 547</a></td> <td class="medium center">2026-11-10 17:04:31</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100013, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100014"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100014/f0">Ilustracyjny Demonstracyjna (Ilustracyjny Demonstracyjna) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100014/f0">Wiadomość testowa 239</a></td> <td class="medium center">2026-11-06 21:35:34</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100014, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100015"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100015" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100015/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100015/f0">Wiadomość testowa 649</a></td> <td class="medium center">2026-11-06 14:59:57</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100015, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100016"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100016/f0">Pokazowy Alfa (Pokazowy Alfa) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100016/f0">Wiadomość testowa 343</a></td> <td class="medium center">2026-11-06 09:26:50</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100016, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100017"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100017" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100017/f0">Roboczy Umowny (Roboczy Umowny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100017/f0">Wiadomość testowa 277</a></td> <td class="medium center">2026-11-05 13:16:57</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100017, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100018"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100018/f0">Roboczy Umowny (Roboczy Umowny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100018/f0">Wiadomość testowa 139</a></td> <td class="medium center">2026-11-05 12:42:01</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100018, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100019"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100019/f0">Beta Gamma (Beta Gamma) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100019/f0">Wiadomość testowa 292</a></td> <td class="medium center">2026-11-05 10:30:58</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100019, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100020"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100020/f0">Beta Gamma (Beta Gamma) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100020/f0">Wiadomość testowa 228</a></td> <td class="medium center">2026-11-05 10:57:10</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100020, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100021"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100021/f0">Delta Epsilon (Delta Epsilon) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100021/f0">Wiadomość testowa 154</a></td> <td class="medium center">2026-11-05 10:35:08</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100021, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100022"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100022" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100022/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100022/f0">Wiadomość testowa 729</a></td> <td class="medium center">2026-11-04 13:10:04</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100022, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100023"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100023/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100023/f0">Wiadomość testowa 940</a></td> <td class="medium center">2026-11-04 12:32:54</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100023, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100024"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100024/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100024/f0">Wiadomość testowa 954</a></td> <td class="medium center">2026-11-03 11:32:02</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100024, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100025"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100025/f0">Zeta Eta (Przedstawiciel Szkolnej Rady Rodziców)</a></td><td> <a href="/wiadomosci/1/5/100025/f0">Wiadomość testowa 875</a></td> <td class="medium center">2026-11-03 09:17:10</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100025, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100026"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100026/f0">Theta Jota (Theta Jota) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100026/f0">Wiadomość testowa 516</a></td> <td class="medium center">2026-11-02 18:18:53</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100026, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100027"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100027/f0">Atrapa Próbny (Atrapa Próbny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100027/f0">Wiadomość testowa 991</a></td> <td class="medium center">2026-11-01 18:16:08</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100027, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100028"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100028/f0">Kappa dop Doświadczalna (Kappa dop Doświadczalna) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100028/f0">Wiadomość testowa 844</a></td> <td class="medium center">2026-10-29 15:56:55</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100028, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100029"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100029/f0">Kappa dop Doświadczalna (Kappa dop Doświadczalna) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100029/f0">Wiadomość testowa 862</a></td> <td class="medium center">2026-10-29 09:36:01</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100029, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100030"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100030/f0">Delta Epsilon (Delta Epsilon) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100030/f0">Wiadomość testowa 550</a></td> <td class="medium center">2026-10-28 11:34:16</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100030, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100031"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100031/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100031/f0">Wiadomość testowa 273</a></td> <td class="medium center">2026-10-27 15:05:17</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100031, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100032"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100032" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100032/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100032/f0">Wiadomość testowa 160</a></td> <td class="medium center">2026-10-26 17:36:05</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100032, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100033"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100033" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100033/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100033/f0">Wiadomość testowa 254</a></td> <td class="medium center">2026-10-26 17:53:21</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100033, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100034"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100034" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100034/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100034/f0">Wiadomość testowa 927</a></td> <td class="medium center">2026-10-26 13:07:05</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100034, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100035"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100035/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100035/f0">Wiadomość testowa 518</a></td> <td class="medium center">2026-10-23 14:41:24</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100035, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100036"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100036/f0">Zeta Eta (Przedstawiciel Szkolnej Rady Rodziców)</a></td><td> <a href="/wiadomosci/1/5/100036/f0">Wiadomość testowa 250</a></td> <td class="medium center">2026-10-22 23:15:06</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100036, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100037"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100037/f0">Atrapa Próbny (Atrapa Próbny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100037/f0">Wiadomość testowa 590</a></td> <td class="medium center">2026-10-21 10:12:42</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100037, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100038"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100038/f0">Pozorna Modelowy (Pozorna Modelowy) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100038/f0">Wiadomość testowa 110</a></td> <td class="medium center">2026-10-21 10:39:54</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100038, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100039"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100039/f0">Atrapa Próbny (Atrapa Próbny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100039/f0">Wiadomość testowa 498</a></td> <td class="medium center">2026-10-21 09:47:17</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100039, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100040"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100040" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100040/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100040/f0">Wiadomość testowa 241</a></td> <td class="medium center">2026-10-13 10:44:40</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100040, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100041"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100041/f0">Ilustracyjny Demonstracyjna (Ilustracyjny Demonstracyjna) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100041/f0">Wiadomość testowa 127</a></td> <td class="medium center">2026-10-09 21:37:49</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100041, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100042"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100042/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100042/f0">Wiadomość testowa 398</a></td> <td class="medium center">2026-10-09 21:44:59</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100042, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100043"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100043/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100043/f0">Wiadomość testowa 110</a></td> <td class="medium center">2026-10-09 15:19:03</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100043, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100044"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100044/f0">Pokazowy Alfa (Pokazowy Alfa) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100044/f0">Wiadomość testowa 499</a></td> <td class="medium center">2026-10-09 11:22:28</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100044, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100045"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100045/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100045/f0">Wiadomość testowa 970</a></td> <td class="medium center">2026-10-09 07:57:48</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100045, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100046"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100046/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100046/f0">Wiadomość testowa 479</a></td> <td class="medium center">2026-10-08 21:16:12</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100046, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100047"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100047" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100047/f0">Pokazowy Alfa (Pokazowy Alfa) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100047/f0">Wiadomość testowa 599</a></td> <td class="medium center">2026-09-25 18:19:16</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100047, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100048"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100048/f0">Atrapa Próbny (Atrapa Próbny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100048/f0">Wiadomość testowa 800</a></td> <td class="medium center">2026-09-23 12:37:14</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100048, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100049"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100049" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100049/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100049/f0">Wiadomość testowa 966</a></td> <td class="medium center">2026-09-21 08:46:23</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100049, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100050"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100050" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100050/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100050/f0">Wiadomość testowa 775</a></td> <td class="medium center">2026-09-16 17:32:57</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100050, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100051"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100051" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100051/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100051/f0">Wiadomość testowa 130</a></td> <td class="medium center">2026-09-16 11:43:09</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100051, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100052"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100052/f0">Ilustracyjny Demonstracyjna (Ilustracyjny Demonstracyjna) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100052/f0">Wiadomość testowa 286</a></td> <td class="medium center">2026-09-15 16:35:14</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100052, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100053"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100053" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100053/f0">Ilustracyjny Demonstracyjna (Ilustracyjny Demonstracyjna) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100053/f0">Wiadomość testowa 869</a></td> <td class="medium center">2026-09-15 15:19:16</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100053, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100054"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100054" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100054/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100054/f0">Wiadomość testowa 914</a></td> <td class="medium center">2026-09-10 08:56:02</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100054, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100055"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100055" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100055/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100055/f0">Wiadomość testowa 655</a></td> <td class="medium center">2026-09-10 08:33:56</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100055, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100056"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100056/f0">Atrapa Próbny (Atrapa Próbny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100056/f0">Wiadomość testowa 180</a></td> <td class="medium center">2026-09-09 16:06:07</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100056, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100057"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100057/f0">Atrapa Próbny (Atrapa Próbny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100057/f0">Wiadomość testowa 353</a></td> <td class="medium center">2026-09-08 12:24:49</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100057, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100058"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100058/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100058/f0">Wiadomość testowa 420</a></td> <td class="medium center">2026-09-02 15:40:57</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100058, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100059"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100059" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100059/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100059/f0">Wiadomość testowa 465</a></td> <td class="medium center">2026-09-02 14:33:25</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100059, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line0">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100060"/>
+</td> <td class="micro center">
+</td>
+<td><a href="/wiadomosci/1/5/100060/f0">Roboczy Umowny (Roboczy Umowny) [Nauczyciel]</a></td><td> <a href="/wiadomosci/1/5/100060/f0">Wiadomość testowa 020</a></td> <td class="medium center">2026-09-02 06:30:09</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100060, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr><tr class="line1">
+<td class="micro center">
+<input class="wiadomoscLista" name="wiadomosci[]" onclick="$('#wiadomosciListaWszystkie').prop('checked', false); " type="checkbox" value="100061"/>
+</td> <td class="micro center">
+<img alt="udostępniony plik" class="tooltip existing-msg-files-icon" data-msg-id="100061" data-node="w4" src="/assets/img/attachment.png" title="Wiadomość zawiera pliki."/>
+</td>
+<td><a href="/wiadomosci/1/5/100061/f0">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</a></td><td> <a href="/wiadomosci/1/5/100061/f0">Wiadomość testowa 883</a></td> <td class="medium center">2026-09-01 18:13:04</td><td class="micro center">
+<a href="javascript:void(0); return false;" onclick='usunWiadomosc(100061, 5, 0, "", 0);' title="Usuń"><img src="/images/usun_kosz.png"/>
+</a></td></tr>
+</tbody>
+<tfoot><tr><td colspan="6"> </td></tr></tfoot>
+</table><table class="stretch message-button-panel"><tbody><tr><td style="vertical-align: middle; text-align: left;   white-space: nowrap;  ">
+<input aria-disabled="false" class="medium left ui-button ui-widget ui-state-default ui-corner-all" name="usun_zaznaczone" onclick="usunListeWiadomosci(5, 0, 0)" role="button" style="z-index: 0;" tabindex="3" type="button" value="Usuń zaznaczone"/><select class="big left" name="opcja_zaznaczone_d" onchange='if(this.value=="drukujWiadomosci") {document.forms[0].action="/wiadomosci/wydruk_wiadomosci.pdf"; document.forms[0].target="_blank"; document.forms[0].submit(); document.forms[0].target="_self"; document.forms[0].action="\/wiadomosci"; this.selectedIndex=0; document.querySelectorAll("input.wiadomoscLista:checked").forEach(input =&gt; input.closest("tr").querySelectorAll("td").forEach(td =&gt; td.style = ""));} else {this.form.submit();}'><option value="0">Więcej poleceń...</option><optgroup label="Inne:"><option value="drukujWiadomosci">Drukuj</option></optgroup></select>
+</td></tr></tbody></table><div class="pagination"><hr/>
+<span>Strona 1 z 2</span><ul><li class="active"> 1 </li><li><a href="javascript:void(null)" onclick="document.getElementById('numer_strony105').value=1; document.getElementById('numer_strony105').form.submit();">2</a></li><li class="jump"><a href="javascript:void(null)" onclick="document.getElementById('numer_strony105').value=1; document.getElementById('numer_strony105').form.submit();">Następna &gt;</a></li><li class="jump"><a href="javascript:void(null)" onclick="document.getElementById('numer_strony105').value=1; document.getElementById('numer_strony105').form.submit();">&gt;&gt;</a></li></ul></div><input id="numer_strony105" name="numer_strony105" type="HIDDEN" value="0"/><input name="porcjowanie_pojemnik105" type="HIDDEN" value="105"/><input name="poprzednia" type="HIDDEN" value="5"/></td></tr></tbody></table></div></div></form> </div>
+
+
+<div class="cookieBox" id="cookieBox" style="">
+<div class="cookieBoxClose" id="cookieBoxClose"><a href="javascript: void(null);">x</a></div>
+<p>
+            Ta strona wykorzystuje pliki cookies. Za ich pomocą zbierane są informacje, które mogą stanowić dane osobowe. Wykorzystujemy je m.in. w celach statystycznych i funkcjonalnych. Korzystając z serwisu bez zmiany konfiguracji przeglądarki, wyrażasz zgodę na zapisanie plików cookies w pamięci Twojego urządzenia. Możesz samodzielnie zarządzać cookies zmieniając odpowiednio ustawienia w Twojej przeglądarce. Więcej informacji o zasadach przetwarzania Twoich danych osobowych oraz przysługujących Ci prawach znajdziesz w <a href="https://synergia.librus.pl/polityka-prywatnosci/" rel="noreferrer noopener" target="_blank">Polityce prywatności</a>.
+        </p>
+</div>
+<div id="footer">
+<hr/>
+<span id="bottom-logo"></span>
+</div>
+</div>
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

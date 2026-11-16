@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl-PL"><head><title>LIBRUS Synergia</title>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+   
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+     
+
+
+
+
+
+
+
+
+</head>
+<body onload="ImageSwaper.GetInstance().Load(); ">
+<div id="preloader-box" style="display: none;">
+<div id="preloader-curtain"></div>
+<div id="preloader" style="left: 640px; top: 360px;">
+<span id="preloader-logo"></span>
+<span id="preloader-loader"></span>
+</div>
+</div>
+
+<div class="yellowCard maximalize ui-draggable" id="yellowCard_1" style="left: 490px; top: 210px; display: none;">
+<div class="titleYellowCard maximalize" id="yellowCard_1_DraggHandle" onmouseup="interface_object_save_position('yellowCard_1', $(this.parentNode).offset().left, $(this.parentNode).offset().top, interfejs_fold_object());">
+<div class="content"></div>
+</div>
+<div class="yellowCardClose" onclick='yellowCardAction("close", "yellowCard_1");' onmouseup="return false;">
+<a href="javascript:void(0);"></a>
+</div>
+<div class="yellowCardMinimalize" onclick='yellowCardAction("minimalize", "yellowCard_1");'></div>
+<div class="yellowCardMaximalize" onclick='yellowCardAction("maximalize", "yellowCard_1");' style="display:none;"></div>
+<div class="cardBody">
+<div class="content"></div>
+</div>
+</div>
+
+
+
+<div class="altum" id="page">
+<div id="header"> <div id="main-navigation-container">
+<div id="main-navigation"> <div id="main-menu">
+<ul class="main-menu-list">
+<li><a href="/wyloguj">Wyloguj</a></li> <li><a href="/help/D13" target="_blank">Pomoc</a></li> <li><a href="/ustawienia">Ustawienia</a></li> <li><a href="/ankiety_admin_ankiety">Ankiety</a></li>
+<li>
+<a href="javascript: void(null);">Uczeń</a>
+<ul> <li><a href="/uwagi">Uwagi</a></li> <li><a href="/uczen_wyniki_egzaminow">Wyniki egzaminów</a></li> <li><a href="/szczegolne_osiagniecia_ucznia">Szczególne osiągnięcia</a></li> <li><a href="/informacja">Informacje</a></li> </ul>
+</li> <li>
+<a href="javascript: void(null);">Organizacja</a>
+<ul>
+<li><a href="javascript:otworz_w_nowym_oknie('/przegladaj_plan_lekcji','plan_u',0,0)">Plan lekcji</a></li>
+<li><a href="/dyzury">Dyżury</a></li> <li><a href="/zaplanowane_lekcje">Lekcje</a></li> <li><a href="/pliki_szkoly">Pliki szkoły</a></li> </ul>
+</li> <li><a href="/eusprawiedliwienia">e-Usprawiedliwienia</a></li> <li>
+<a href="javascript: void(null);">Świetlica</a>
+<ul>
+<li><a href="/panel_rodzica/swietlica/wygenerowane_kody">Kody PIN</a></li>
+<li><a href="/panel_rodzica/swietlica/osoby_uprawnione">Osoby uprawnione</a></li>
+</ul>
+</li> <li>
+<a href="https://eduranga.pl/librus" target="_blank">EDURANGA</a>
+</li> </ul>
+</div>
+</div>
+</div> <div id="top-banner-container">
+<a href="/rodzic/index             ">
+<img id="top-banner" src="/assets/img/synergia/header/benners/default.png         "/>
+</a> <div id="graphic-menu">
+<ul> <li>
+<a href="/gateway/ms/studentdatapanel/ui/" id="icon-wcag" title="Widok alternatywny">
+<span class="circle"></span> Widok alternatywny
+            </a>
+</li> <li><a href="/przegladaj_oceny/uczen" id="icon-oceny"><span class="circle"></span>Oceny</a>
+</li>
+<li>
+<a href="/przegladaj_nb/uczen" id="icon-nb">
+<span class="circle"></span>Frekwencja
+                        </a>
+</li>
+<li><a href="/wiadomosci" id="icon-wiadomosci" title="Liczba nieprzeczytanych wiadomości: 33"><span class="circle"></span>Wiadomości</a> 
+</li><li><a href="/ogloszenia" id="icon-ogloszenia"><span class="circle"></span>Ogłoszenia</a> </li>
+<li><a href="/terminarz" id="icon-terminarz"><span class="circle"></span>Terminarz</a> </li>
+<li><a href="/moje_zadania" id="icon-zadania"><span class="circle"></span>Zadania domowe</a> </li>
+</ul>
+</div> </div>
+<div id="user-section">
+szczęśliwy numerek: <span class="luckyNumber"> <b>1</b> </span>    <span class="tooltip" title="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)">historia logowań </span> <img alt="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)" class="tooltip helper-icon" src="/images/pomoc_ciemna.png" title="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)"/>  | jesteś zalogowany jako: <b>Rodzic Testowy</b>
+<select id="language" name="Język" onchange="window.location.href=this.value;" style="width: 80px; height: 20px;">
+<option value="/gateway/ms/studentdatapanel/ui/">polski</option>
+<option value="/gateway/ms/studentdatapanel/ui/angielska-instrukcja">english</option>
+<option value="/gateway/ms/studentdatapanel/ui/rosyjska-instrukcja">русский</option>
+<option value="/gateway/ms/studentdatapanel/ui/ukrainska-instrukcja">український</option>
+</select>
+</div>
+</div>
+
+<div id="left-widgets-container" style="height: 0px; position: fixed; top: 152px;">
+</div>
+<div id="body">
+<div id="missing-2fa-warning"></div>
+<form action="/terminarz" id="scheduleForm" method="post" name="formularz_terminarza">
+<input name="requestkey" type="hidden" value="FAKE_REQUEST_KEY"/>
+<div class="container">
+<h2 class="inside">Terminarz</h2>
+<span class="fold"> <a class="fold-link hidden ukryty-guzik-wroc" href="/terminarz"><span class="fold-start">Wróć</span><span class="fold-end"></span></a></span> <div class="container-background">
+<div class="centrowanie"> 
+
+<table class="kalendarz decorated center"><thead><tr>
+<td class="center" colspan="7">
+<a class="left" href="javascript:void();" onclick="prev(this);"><img src="/images/strzalka_lewo.gif"/></a>
+<select class="ListaWyboru" name="miesiac" onchange="this.form.submit();"><option value="1">Styczeń</option><option value="2">Luty</option><option value="3">Marzec</option><option value="4">Kwiecień</option><option value="5">Maj</option><option value="6">Czerwiec</option><option value="7">Lipiec</option><option value="8">Sierpień</option><option value="9">Wrzesień</option><option value="10">Październik</option><option value="11">Listopad</option><option selected="selected" value="12">Grudzień</option></select> <select class="ListaWyboru" name="rok" onchange="this.form.submit();"><option selected="selected" value="2026"> 2026</option><option value="2027"> 2027</option></select>
+<a class="right" href="javascript:void();" onclick="next(this);"><img src="/images/strzalka_prawo.gif"/></a>
+</td>
+</tr><tr>
+<td title="Poniedziałek">Pn</td>
+<td title="Wtorek">Wt</td>
+<td title="Środa">Śr</td>
+<td title="Czwartek">Cz</td>
+<td title="Piątek">Pt</td>
+<td class="weekend" title="Sobota">So</td>
+<td class="weekend" title="Niedziela">N</td>
+</tr></thead><tbody><tr class="line0">
+<td> </td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">1</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">2</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">3</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">4</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100212'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: Zajęcia odbędą się zgodnie z planem. Zbiórka przed budynkiem szkoły. Szczegóły zostaną przekazane na najbliższym spotkaniu.&lt;br /&gt;Data dodania: 2026-09-17 08:01:09">Czas: 11:00 - 13:00<br/><span class="przedmiot">matematyka</span>, Wydarzenie<br/>8a SP1</td></tr><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100213'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: Zgłoszenia przyjmujemy do końca tygodnia. Termin może ulec zmianie. Zajęcia odbędą się zgodnie z planem.&lt;br /&gt;Data dodania: 2026-11-06 14:48:41">Czas: 13:50 - 17:00<br/>Wydarzenie<br/>8a SP1<br/>Sala: 20</td></tr></tbody></table></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">5</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100214'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: Szanowni Państwo, przekazujemy informacje organizacyjne.&lt;br /&gt;Data dodania: 2026-09-11 09:12:58">Czas: 14:00 - 16:45<br/><span class="przedmiot">matematyka</span>, Wydarzenie<br/>8a SP1</td></tr></tbody></table></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">6</div></div></td>
+</tr><tr class="line1">
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">7</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">8</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">9</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100215'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Zastępczy Ćwiczebna&lt;br /&gt;Opis: Zbiórka przed budynkiem szkoły. Szczegóły zostaną przekazane na najbliższym spotkaniu. Zakres materiału obejmuje ostatni dział.&lt;br /&gt;Data dodania: 2026-10-07 09:22:15">Nr lekcji: 1<br/><span class="przedmiot">informatyka</span>, Wydarzenie<br/>8a SP1<br/>Sala: 10</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">10</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">11</div></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">12</div></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">13</div></div></td>
+</tr><tr class="line0">
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">14</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100216'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: Zbiórka przed budynkiem szkoły. Szczegóły zostaną przekazane na najbliższym spotkaniu. Zakres materiału obejmuje ostatni dział.&lt;br /&gt;Data dodania: 2026-11-03 11:54:59">Czas: 09:00 - 12:00<br/><span class="przedmiot">język polski</span>, Wydarzenie<br/>8a SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">15</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100217'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: Zajęcia odbędą się zgodnie z planem.&lt;br /&gt;Data dodania: 2026-11-03 11:45:48">Czas: 09:00 - 11:00<br/><span class="przedmiot">matematyka</span>, Wydarzenie<br/>8a SP1</td></tr><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100218'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: Zakres materiału obejmuje ostatni dział. Uczniowie proszeni są o przygotowanie potrzebnych materiałów. Szanowni Państwo, przekazujemy informacje organizacyjne.&lt;br /&gt;Data dodania: 2026-10-23 12:38:07">Czas: 19:00 - 21:00<br/>Wydarzenie<br/>8a SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">16</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100219'" style="background-color: rgb(255, 215, 0); cursor: pointer; color: rgb(49, 51, 50);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: Szczegóły zostaną przekazane na najbliższym spotkaniu.&lt;br /&gt;Data dodania: 2026-11-03 11:00:28">Czas: 09:00 - 11:00<br/><span class="przedmiot">język angielski</span>, Wydarzenie<br/>8a SP1</td></tr><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly/100220'" style="background-color: rgb(50, 205, 50); cursor: pointer; color: rgb(255, 255, 255);" title="Nauczyciel: Atrapa Próbny&lt;br /&gt;Opis: W razie pytań prosimy o kontakt z wychowawcą.&lt;br /&gt;Data dodania: 2026-10-23 12:11:18">Czas: 09:30 - 12:30<br/>Wycieczka<br/>8a SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">17</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">18</div></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">19</div></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">20</div></div></td>
+</tr><tr class="line1">
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">21</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">22</div></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">23</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100221'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Dzień wolny od zajęć dydaktycznych: SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">24</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100222'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Boże Narodzenie: SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">25</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100222'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Boże Narodzenie: SP1</td></tr></tbody></table></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">26</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100222'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Boże Narodzenie: SP1</td></tr></tbody></table></div></td>
+<td class="center weekend"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">27</div></div></td>
+</tr><tr class="line0">
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">28</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100223'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Dzień wolny od zajęć dydaktycznych: SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">29</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100223'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Dzień wolny od zajęć dydaktycznych: SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">30</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100223'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Dzień wolny od zajęć dydaktycznych: SP1</td></tr></tbody></table></div></td>
+<td class="center"><div class="kalendarz-dzien"><div class="kalendarz-numer-dnia">31</div><table><tbody><tr><td class="no-border-left no-border-right" onclick="location.href='/terminarz/szczegoly_wolne/100223'" style="background-color: rgb(255, 120, 120); cursor: pointer; color: rgb(49, 51, 50);">Dzień wolny od zajęć dydaktycznych: SP1</td></tr></tbody></table></div></td>
+<td class="pusta"> </td>
+<td class="pusta"> </td>
+<td class="pusta ostatni"> </td>
+</tr>
+</tbody><tbody></tbody><tfoot><tr><td colspan="7"> </td></tr></tfoot></table></div></div><br/><br/> </div></form>
+
+
+<div class="cookieBox" id="cookieBox" style="">
+<div class="cookieBoxClose" id="cookieBoxClose"><a href="javascript: void(null);">x</a></div>
+<p>
+            Ta strona wykorzystuje pliki cookies. Za ich pomocą zbierane są informacje, które mogą stanowić dane osobowe. Wykorzystujemy je m.in. w celach statystycznych i funkcjonalnych. Korzystając z serwisu bez zmiany konfiguracji przeglądarki, wyrażasz zgodę na zapisanie plików cookies w pamięci Twojego urządzenia. Możesz samodzielnie zarządzać cookies zmieniając odpowiednio ustawienia w Twojej przeglądarce. Więcej informacji o zasadach przetwarzania Twoich danych osobowych oraz przysługujących Ci prawach znajdziesz w <a href="https://synergia.librus.pl/polityka-prywatnosci/" rel="noreferrer noopener" target="_blank">Polityce prywatności</a>.
+        </p>
+</div>
+<div id="footer">
+<hr/>
+<span id="bottom-logo"></span>
+</div>
+</div>
+</div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>

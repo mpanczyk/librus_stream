@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pl-PL"><head><title>LIBRUS Synergia</title>
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+   
+ 
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+     
+
+
+
+
+
+
+
+
+</head>
+<body onload="ImageSwaper.GetInstance().Load(); ">
+<div id="preloader-box" style="display: none;">
+<div id="preloader-curtain"></div>
+<div id="preloader" style="left: 640px; top: 360px;">
+<span id="preloader-logo"></span>
+<span id="preloader-loader"></span>
+</div>
+</div> <div class="yellowCard maximalize" id="yellowCard_1" style="left: 490px; top: 210px; display: none;">
+<div class="titleYellowCard maximalize" id="yellowCard_1_DraggHandle" onmouseup="interface_object_save_position('yellowCard_1', $(this.parentNode).offset().left, $(this.parentNode).offset().top, interfejs_fold_object());">
+<div class="content"></div>
+</div>
+<div class="yellowCardClose" onclick='yellowCardAction("close", "yellowCard_1");' onmouseup="return false;">
+<a href="javascript:void(0);"></a>
+</div>
+<div class="yellowCardMinimalize" onclick='yellowCardAction("minimalize", "yellowCard_1");'></div>
+<div class="yellowCardMaximalize" onclick='yellowCardAction("maximalize", "yellowCard_1");' style="display:none;"></div>
+<div class="cardBody">
+<div class="content"></div>
+</div>
+</div>
+
+
+
+<div class="altum" id="page">
+<div id="header"> <div id="main-navigation-container">
+<div id="main-navigation"> <div id="main-menu">
+<ul class="main-menu-list">
+<li><a href="/wyloguj">Wyloguj</a></li> <li><a href="/help/D13" target="_blank">Pomoc</a></li> <li><a href="/ustawienia">Ustawienia</a></li> <li><a href="/ankiety_admin_ankiety">Ankiety</a></li>
+<li>
+<a href="javascript: void(null);">Uczeń</a>
+<ul> <li><a href="/uwagi">Uwagi</a></li> <li><a href="/uczen_wyniki_egzaminow">Wyniki egzaminów</a></li> <li><a href="/szczegolne_osiagniecia_ucznia">Szczególne osiągnięcia</a></li> <li><a href="/informacja">Informacje</a></li> </ul>
+</li> <li>
+<a href="javascript: void(null);">Organizacja</a>
+<ul>
+<li><a href="javascript:otworz_w_nowym_oknie('/przegladaj_plan_lekcji','plan_u',0,0)">Plan lekcji</a></li>
+<li><a href="/dyzury">Dyżury</a></li> <li><a href="/zaplanowane_lekcje">Lekcje</a></li> <li><a href="/pliki_szkoly">Pliki szkoły</a></li> </ul>
+</li> <li><a href="/eusprawiedliwienia">e-Usprawiedliwienia</a></li> <li>
+<a href="javascript: void(null);">Świetlica</a>
+<ul>
+<li><a href="/panel_rodzica/swietlica/wygenerowane_kody">Kody PIN</a></li>
+<li><a href="/panel_rodzica/swietlica/osoby_uprawnione">Osoby uprawnione</a></li>
+</ul>
+</li> <li>
+<a href="https://eduranga.pl/librus" target="_blank">EDURANGA</a>
+</li> </ul>
+</div>
+</div>
+</div> <div id="top-banner-container">
+<a href="/rodzic/index             ">
+<img id="top-banner" src="/assets/img/synergia/header/benners/default.png         "/>
+</a> <div id="graphic-menu">
+<ul> <li>
+<a href="/gateway/ms/studentdatapanel/ui/" id="icon-wcag" title="Widok alternatywny">
+<span class="circle"></span> Widok alternatywny
+            </a>
+</li> <li><a href="/przegladaj_oceny/uczen" id="icon-oceny"><span class="circle"></span>Oceny</a>
+</li>
+<li>
+<a href="/przegladaj_nb/uczen" id="icon-nb">
+<span class="circle"></span>Frekwencja
+                        </a>
+</li>
+<li><a href="/wiadomosci" id="icon-wiadomosci" title="Liczba nieprzeczytanych wiadomości: 44"><span class="circle"></span>Wiadomości</a> 
+</li><li><a href="/ogloszenia" id="icon-ogloszenia"><span class="circle"></span>Ogłoszenia</a> </li>
+<li><a href="/terminarz" id="icon-terminarz"><span class="circle"></span>Terminarz</a> </li>
+<li><a href="/moje_zadania" id="icon-zadania"><span class="circle"></span>Zadania domowe</a> </li>
+</ul>
+</div> </div>
+<div id="user-section">
+szczęśliwy numerek: <span class="luckyNumber"> <b>1</b> </span>    <span class="tooltip" title="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)">historia logowań </span> <img alt="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)" class="tooltip helper-icon" src="/images/pomoc_ciemna.png" title="&lt;b&gt;ostatnie udane logowania:&lt;/b&gt;&lt;br /&gt;(usunięte z fixtures)"/>  | jesteś zalogowany jako: <b>Rodzic Testowy</b>
+<select id="language" name="Język" onchange="window.location.href=this.value;" style="width: 80px; height: 20px;">
+<option value="/gateway/ms/studentdatapanel/ui/">polski</option>
+<option value="/gateway/ms/studentdatapanel/ui/angielska-instrukcja">english</option>
+<option value="/gateway/ms/studentdatapanel/ui/rosyjska-instrukcja">русский</option>
+<option value="/gateway/ms/studentdatapanel/ui/ukrainska-instrukcja">український</option>
+</select>
+</div>
+</div>
+
+<div id="left-widgets-container" style="height: 0px; position: fixed; top: 152px;">
+</div>
+<div id="body">
+<div id="missing-2fa-warning"></div>
+<form action="/wiadomosci" enctype="multipart/form-data" id="formWiadomosci" method="POST" name="formWiadomosci">
+<input name="requestkey" type="hidden" value="FAKE_REQUEST_KEY"/>
+<input id="filtrUzytkownikow" name="filtrUzytkownikow" type="hidden" value="0"/>
+<input name="idPojemnika" type="hidden" value=""/>
+<div class="container static">
+<h2 class="inside"> Wiadomości </h2><div class="container-background">
+<div class="warning-box information medium">
+<div class="warning-head">
+<span class="warning-title">Informacja</span>
+<span class="warning-close"> </span>
+</div>
+<div class="warning-content">
+<p>Korzystasz ze starej wersji modułu Wiadomości, która nie jest już rozwijana i nie zawiera wszystkich dostępnych funkcji.</p>
+<p><b>Przejdź do ustawień i włącz opcję: Używaj nowego systemu wiadomości.</b></p>
+</div>
+<div class="center">
+<input aria-disabled="false" class="ui-button ui-widget ui-state-default ui-corner-all" onclick="location.href='/ustawienia';" role="button" style="z-index: 0;" type="button" value="Przejdź do ustawień"/>
+</div>
+<br/>
+</div>
+<table class="stretch container-message">
+<tbody><tr>
+<td class="message-folders">
+<table class="message-folders-options">
+<tbody><tr>
+<td><a class="button left blue" href="/wiadomosci/2/5" id="wiadomosci-napisz" style="width: 100px;">
+<span class="button-start">Napisz</span><span class="button-end"></span>
+</a> </td>
+</tr>
+</tbody></table> <table class="message-folders">
+<tbody><tr>
+<td class="tree-first-branch"> </td>
+<td>
+<a class="" href="/wiadomosci/10">uwagi</a>
+</td>
+</tr>
+<tr>
+<td class="tree-next-branch"> </td>
+<td style="font-weight: bold">
+<a class="selected" href="/wiadomosci/5">odebrane</a>
+</td>
+</tr>
+<tr>
+<td class="tree-next-branch"> </td>
+<td>
+<a class="" href="/wiadomosci/6">wysłane</a>
+</td>
+</tr>
+<tr>
+<td class="tree-next-branch"> </td>
+<td>
+<a class="" href="/wiadomosci/7">kosz</a>
+</td>
+</tr>
+<tr>
+<td class="tree-last-branch"> </td>
+<td>
+<a href="/wiadomosci_archiwum">Archiwum</a>
+</td>
+</tr></tbody></table><hr class="message-block-separator"/>
+<table class="stretch message-folders-options"><tbody><tr><td><input aria-disabled="false" class="small ui-button ui-widget ui-state-default ui-corner-all" onclick="otworz_w_nowym_oknie('/wiadomosci/etykiety','o1',700,400)" role="button" style="z-index: 0;" type="BUTTON" value="Dodaj"/></td></tr></tbody></table>
+<table class="message-labels">
+<tbody><tr>
+<td class="space-holder"> </td>
+<td colspan="3"><b>Etykiety</b></td>
+</tr>
+</tbody></table></td><td><table class="stretch message-button-panel"><tbody><tr><td style="vertical-align: middle; text-align: left;   ">
+
+<input aria-disabled="false" class="small ui-button ui-widget ui-state-default ui-corner-all" onclick="linkButtonFn9a61dcf3b6125c95b47d3d1fdfd89e52()" role="button" style="z-index: 0;" title="" type="button" value="Przekaż"/>
+
+<input aria-disabled="false" class="medium ui-button ui-widget ui-state-default ui-corner-all" onclick="linkButtonFn1cd0d57dde0718e6e229fce100164e8a()" role="button" style="z-index: 0;" title="" type="button" value="Odpowiedz"/>
+<input aria-disabled="false" class="ui-button ui-widget ui-state-default ui-corner-all" onclick="javascript:usunWiadomosc(100061, 5, 0, '', 0);" role="button" style="z-index: 0;" type="button" value="Usuń"/> 
+<input aria-disabled="false" class="small ui-button ui-widget ui-state-default ui-corner-all" onclick="linkButtonFn87d212d1b95f1e3df9e6ccbe100165f54()" role="button" style="z-index: 0;" title="" type="button" value="Wróć"/>
+</td></tr></tbody></table><table class="stretch">
+<tbody><tr><td class="medium left"><b>Nadawca</b></td><td class="left">Przykładowy Testowa (Przykładowy Testowa) [Dyrektor Szkoły]</td></tr>
+<tr><td class="medium left"><b>Temat</b></td><td class="left">Wiadomość testowa 996</td></tr>
+<tr><td class="medium left"><b>Wysłano</b></td><td class="left">2026-09-01 18:13:04</td></tr></tbody></table>
+<div class="container-message-content">Zakres materiału obejmuje ostatni dział. Uczniowie proszeni są o przygotowanie potrzebnych materiałów. Szanowni Państwo, przekazujemy informacje organizacyjne.<br/>Szanowni Państwo, przekazujemy informacje organizacyjne. Dziękujemy za współpracę. Prosimy o zapoznanie się z treścią komunikatu.<br/>Termin może ulec zmianie. Zajęcia odbędą się zgodnie z planem.<br/>Szanowni Państwo, przekazujemy informacje organizacyjne. Dziękujemy za współpracę.<br/>Szanowni Państwo, przekazujemy informacje organizacyjne.<br/><a href="https://example.com/link/499" target="_blank">https://example.com/link/499</a></div> <table>
+<tbody><tr>
+<td class="left" colspan="2">
+<b>Pliki:</b>
+</td>
+</tr>
+<tr>
+<td>
+
+<img src="/assets/img/filetype_icons/doc.png"/>
+ zalacznik_297.doc </td>
+<td>
+                     
+                    
+<a href="javascript:void(0);">
+<img class="" onclick='
+                    
+                        otworz_w_nowym_oknie(
+                            "\/wiadomosci\/pobierz_zalacznik\/100061\/100166",
+                            "o2",
+                            420,
+                            250                        )
+
+                                    ' src="/assets/img/homework_files_icons/download.png" title=""/>
+</a>
+</td>
+</tr>
+</tbody></table>
+<table class="stretch">
+<tbody>
+</tbody></table></td></tr></tbody></table></div></div></form> </div>
+
+
+<div class="cookieBox" id="cookieBox" style="">
+<div class="cookieBoxClose" id="cookieBoxClose"><a href="javascript: void(null);">x</a></div>
+<p>
+            Ta strona wykorzystuje pliki cookies. Za ich pomocą zbierane są informacje, które mogą stanowić dane osobowe. Wykorzystujemy je m.in. w celach statystycznych i funkcjonalnych. Korzystając z serwisu bez zmiany konfiguracji przeglądarki, wyrażasz zgodę na zapisanie plików cookies w pamięci Twojego urządzenia. Możesz samodzielnie zarządzać cookies zmieniając odpowiednio ustawienia w Twojej przeglądarce. Więcej informacji o zasadach przetwarzania Twoich danych osobowych oraz przysługujących Ci prawach znajdziesz w <a href="https://synergia.librus.pl/polityka-prywatnosci/" rel="noreferrer noopener" target="_blank">Polityce prywatności</a>.
+        </p>
+</div>
+<div id="footer">
+<hr/>
+<span id="bottom-logo"></span>
+</div>
+</div>
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></body></html>
